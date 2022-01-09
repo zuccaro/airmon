@@ -1,0 +1,12 @@
+[Unit]
+Description=Air Quality Monitor
+After=network-online.target
+
+[Service]
+User=pi
+Restart=on-failure
+
+ExecStart=/home/pi/mon.py
+
+[Install]
+WantedBy=multi-user.target
